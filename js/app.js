@@ -36,12 +36,12 @@ class Presupuesto {
 }
 
 class UI {
-
+     // mtodo 1
     insertarPresupuesto( cantidad ) {
      document.querySelector('#total').textContent = cantidad.presupuesto;
      document.querySelector('#restante').textContent = cantidad.restante;
     }
-    
+    // mtodo 2
     imprimirAlerta(mensaje, tipo) {
         // Crea el div
         const divMensaje = document.createElement('div');
@@ -64,7 +64,7 @@ class UI {
              document.querySelector('.primario .alert').remove();
         }, 3000);
    }
-
+    // mtodo 3
     // Inserta los gastos a la lista 
     agregarGastoListado(gastos) {
 
@@ -96,12 +96,12 @@ class UI {
             gastosListado.appendChild(nuevoGasto);
         });
    }
-
+     // mtodo 4
      // Comprueba el presupuesto restante
     actualizarRestante(restante) {
         document.querySelector('span#restante').textContent = restante; 
     }
-
+    // mtodo 5
      // Cambia de color el presupuesto restante
      comprobarPresupuesto(presupuestoObj) {
         const { presupuesto, restante} = presupuestoObj;
@@ -128,7 +128,7 @@ class UI {
             formulario.querySelector('button[type="submit"]').disabled = true;
         } 
     }
-
+    // mtodo 6
     limpiarHTML() {
         while(gastosListado.firstChild) {
             gastosListado.removeChild(gastosListado.firstChild);
